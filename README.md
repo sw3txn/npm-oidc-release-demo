@@ -97,6 +97,7 @@ This repository demonstrates semantic-release through a series of pull requests 
 | 1.2.0 | [#7](https://github.com/sw3txn/npm-oidc-release-demo/pull/7) | merge | Promote subtract to stable | [v1.2.0](https://github.com/sw3txn/npm-oidc-release-demo/releases/tag/v1.2.0) |
 | 1.3.0 | [#8](https://github.com/sw3txn/npm-oidc-release-demo/pull/8) | `feat:` | Add factorial function | [v1.3.0](https://github.com/sw3txn/npm-oidc-release-demo/releases/tag/v1.3.0) |
 | 1.3.0 | [#9](https://github.com/sw3txn/npm-oidc-release-demo/pull/9) | `style:` | Add braces to factorial conditionals | No release |
+| 1.3.0 | [#10](https://github.com/sw3txn/npm-oidc-release-demo/pull/10) | `refactor:` | Convert factorial to iterative | No release |
 
 Each PR demonstrates a different conventional commit type and shows how semantic-release handles versioning and publishing.
 
