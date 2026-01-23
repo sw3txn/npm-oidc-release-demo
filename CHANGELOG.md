@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/sw3txn/npm-oidc-release-demo/compare/v1.1.0...v1.1.1) (2026-01-23)
+
+
+### Bug Fixes
+
+* handle negative numbers in multiply ([bee82a0](https://github.com/sw3txn/npm-oidc-release-demo/commit/bee82a08b42f764c6e73e5f9e835bf977eb15501))
+
 # [1.1.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v1.0.0...v1.1.0) (2026-01-23)
 
 
