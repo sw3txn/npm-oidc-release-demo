@@ -27,3 +27,15 @@ export function multiply(a: number, b: number): number {
 export function subtract(a: number, b: number): number {
   return a - b;
 }
+
+/**
+ * Calculates the factorial of a number.
+ * @param n - The number to calculate factorial for
+ * @returns The factorial of n
+ * @throws {Error} If n is negative
+ */
+export function factorial(n: number): number {
+  if (n < 0) throw new Error('Factorial is not defined for negative numbers');
+  if (n === 0 || n === 1) return 1;
+  return n * factorial(n - 1);
+}
