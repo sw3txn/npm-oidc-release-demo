@@ -1,6 +1,6 @@
 {
   "name": "@sw3txn/npm-oidc-release-demo",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Demo of automated npm releases with OIDC and semantic-release",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
