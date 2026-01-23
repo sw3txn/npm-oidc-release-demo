@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/sw3txn/npm-oidc-release-demo/compare/v1.3.0...v1.3.1) (2026-01-23)
+
+
+### Performance Improvements
+
+* add memoization to factorial ([c110767](https://github.com/sw3txn/npm-oidc-release-demo/commit/c110767523adeeb207e488c9d381353779bb5968))
+
 # [1.3.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v1.2.0...v1.3.0) (2026-01-23)
 
 
