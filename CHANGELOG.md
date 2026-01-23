@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/sw3txn/npm-oidc-release-demo/compare/v1.3.1...v1.3.2) (2026-01-23)
+
+
+### Reverts
+
+* remove factorial memoization due to memory concerns ([62fcdcb](https://github.com/sw3txn/npm-oidc-release-demo/commit/62fcdcbe94ed5d273adcb9a75a9209f192e2fa0d))
+
 ## [1.3.1](https://github.com/sw3txn/npm-oidc-release-demo/compare/v1.3.0...v1.3.1) (2026-01-23)
 
 
