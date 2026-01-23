@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v1.2.0...v1.3.0) (2026-01-23)
+
+
+### Features
+
+* add factorial function ([9717c7b](https://github.com/sw3txn/npm-oidc-release-demo/commit/9717c7bd6c94f51dabd15de85f63fa1ef5875d6f))
+
 # [1.2.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v1.1.1...v1.2.0) (2026-01-23)
 
 
