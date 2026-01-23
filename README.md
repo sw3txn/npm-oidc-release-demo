@@ -100,6 +100,7 @@ This repository demonstrates semantic-release through a series of pull requests 
 | 1.3.0 | [#10](https://github.com/sw3txn/npm-oidc-release-demo/pull/10) | `refactor:` | Convert factorial to iterative | No release |
 | 1.3.1 | [#11](https://github.com/sw3txn/npm-oidc-release-demo/pull/11) | `perf:` | Add memoization to factorial | [v1.3.1](https://github.com/sw3txn/npm-oidc-release-demo/releases/tag/v1.3.1) |
 | 1.3.2 | [#12](https://github.com/sw3txn/npm-oidc-release-demo/pull/12) | `revert:` | Remove factorial memoization | [v1.3.2](https://github.com/sw3txn/npm-oidc-release-demo/releases/tag/v1.3.2) |
+| 2.0.0 | [#13](https://github.com/sw3txn/npm-oidc-release-demo/pull/13) | `feat!:` | **BREAKING:** Rename `add()` to `sum()` | [v2.0.0](https://github.com/sw3txn/npm-oidc-release-demo/releases/tag/v2.0.0) |
 
 Each PR demonstrates a different conventional commit type and shows how semantic-release handles versioning and publishing.
 
