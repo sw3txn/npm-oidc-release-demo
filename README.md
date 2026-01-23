@@ -89,6 +89,7 @@ This repository demonstrates semantic-release through a series of pull requests 
 |---------|----|----|--------|---------|
 | 1.0.0 | - | - | Initial release | [v1.0.0](https://github.com/sw3txn/npm-oidc-release-demo/releases/tag/v1.0.0) |
 | 1.0.0 | [#1](https://github.com/sw3txn/npm-oidc-release-demo/pull/1) | `docs:` | Add npm OIDC configuration instructions | No release |
+| 1.1.0 | [#2](https://github.com/sw3txn/npm-oidc-release-demo/pull/2) | `feat:` | Add multiply function | [v1.1.0](https://github.com/sw3txn/npm-oidc-release-demo/releases/tag/v1.1.0) |
 
 Each PR demonstrates a different conventional commit type and shows how semantic-release handles versioning and publishing.
 
