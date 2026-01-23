@@ -93,6 +93,7 @@ This repository demonstrates semantic-release through a series of pull requests 
 | 1.1.1 | [#3](https://github.com/sw3txn/npm-oidc-release-demo/pull/3) | `fix:` | Fix multiply for negative numbers | [v1.1.1](https://github.com/sw3txn/npm-oidc-release-demo/releases/tag/v1.1.1) |
 | 1.1.1 | [#4](https://github.com/sw3txn/npm-oidc-release-demo/pull/4) | `test:` | Add test for negative multiply | No release |
 | 1.1.1 | [#6](https://github.com/sw3txn/npm-oidc-release-demo/pull/6) | `ci:` | Fix beta release workflow | No release |
+| 1.2.0-beta.1 | [#5](https://github.com/sw3txn/npm-oidc-release-demo/pull/5) | `feat:` | Add subtract (beta) | [v1.2.0-beta.1](https://github.com/sw3txn/npm-oidc-release-demo/releases/tag/v1.2.0-beta.1) |
 
 Each PR demonstrates a different conventional commit type and shows how semantic-release handles versioning and publishing.
 

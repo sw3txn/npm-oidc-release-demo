@@ -1,4 +1,4 @@
-import { add, multiply } from './math';
+import { add, multiply, subtract } from './math';
 
 describe('add', () => {
   it('should add two positive numbers', () => {
@@ -21,5 +21,11 @@ describe('multiply', () => {
 
   it('should handle negative numbers', () => {
     expect(multiply(-2, 3)).toBe(-6);
+  });
+});
+
+describe('subtract', () => {
+  it('should subtract numbers', () => {
+    expect(subtract(5, 3)).toBe(2);
   });
 });
