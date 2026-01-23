@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v1.0.0...v1.1.0) (2026-01-23)
+
+
+### Features
+
+* add multiply function ([621b79a](https://github.com/sw3txn/npm-oidc-release-demo/commit/621b79adbeceed996189c903e1820542c63684a6))
+
 # 1.0.0 (2026-01-23)
 
 
