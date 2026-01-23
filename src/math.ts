@@ -15,5 +15,5 @@ export function add(a: number, b: number): number {
  * @returns The product of a and b
  */
 export function multiply(a: number, b: number): number {
-  return Math.abs(a) * Math.abs(b);  // Bug: loses sign
+  return a * b;
 }
