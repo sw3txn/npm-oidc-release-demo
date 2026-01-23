@@ -34,27 +34,17 @@ export function subtract(a: number, b: number): number {
  * @returns The factorial of n
  * @throws {Error} If n is negative
  */
-export const factorial = (() => {
-  const cache = new Map<number, number>();
+export function factorial(n: number): number {
+  if (n < 0) {
+    throw new Error('Factorial is not defined for negative numbers');
+  }
+  if (n === 0 || n === 1) {
+    return 1;
+  }
 
-  return (n: number): number => {
-    if (n < 0) {
-      throw new Error('Factorial is not defined for negative numbers');
-    }
-    if (n === 0 || n === 1) {
-      return 1;
-    }
-
-    if (cache.has(n)) {
-      return cache.get(n)!;
-    }
-
-    let result = 1;
-    for (let i = 2; i <= n; i++) {
-      result *= i;
-    }
-
-    cache.set(n, result);
-    return result;
-  };
-})();
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
