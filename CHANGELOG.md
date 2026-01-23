@@ -1,3 +1,16 @@
+# [2.0.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v1.3.2...v2.0.0) (2026-01-23)
+
+
+* feat!: rename add function to sum for clarity ([c2a66d6](https://github.com/sw3txn/npm-oidc-release-demo/commit/c2a66d6b79fec3c27ce44b0259ff7c3c6d49006f))
+
+
+### BREAKING CHANGES
+
+* The add() function has been renamed to sum().
+All existing code using add() must be updated to use sum() instead.
+
+Co-Authored-By: Claude <noreply@anthropic.com>
+
 ## [1.3.2](https://github.com/sw3txn/npm-oidc-release-demo/compare/v1.3.1...v1.3.2) (2026-01-23)
 
 
