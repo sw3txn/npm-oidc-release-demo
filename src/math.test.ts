@@ -18,4 +18,8 @@ describe('multiply', () => {
   it('should multiply positive numbers', () => {
     expect(multiply(2, 3)).toBe(6);
   });
+
+  it('should handle negative numbers', () => {
+    expect(multiply(-2, 3)).toBe(-6);
+  });
 });
