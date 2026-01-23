@@ -79,11 +79,25 @@ This package includes SLSA provenance attestation. Verify package authenticity:
 npm audit signatures
 ```
 
+## Demonstration Progress
+
+This repository demonstrates semantic-release through a series of pull requests that show different commit types and their effects on versioning.
+
+### Story Arc: Building a Math Library
+
+| Version | PR | Type | Change | Release |
+|---------|----|----|--------|---------|
+| 1.0.0 | - | - | Initial release | [v1.0.0](https://github.com/sw3txn/npm-oidc-release-demo/releases/tag/v1.0.0) |
+| 1.0.0 | [#1](https://github.com/sw3txn/npm-oidc-release-demo/pull/1) | `docs:` | Add npm OIDC configuration instructions | No release |
+
+Each PR demonstrates a different conventional commit type and shows how semantic-release handles versioning and publishing.
+
 ## Resources
 
 - [npm package](https://www.npmjs.com/package/@sw3txn/npm-oidc-release-demo)
 - [Release process documentation](RELEASE.md)
 - [Changelog](CHANGELOG.md)
+
 
 ## License
 

@@ -155,3 +155,30 @@ semantic-release follows [Semantic Versioning](https://semver.org/):
 - **Major** (X.0.0) - Breaking changes
 - **Minor** (0.X.0) - New features (backward compatible)
 - **Patch** (0.0.X) - Bug fixes (backward compatible)
+
+## NPM OIDC Configuration
+
+This repository uses OIDC to authenticate with npm, eliminating the need for long-lived npm tokens.
+
+### Prerequisites
+
+- GitHub repository with Actions enabled
+- npm account with publishing permissions
+
+### Setup Steps
+
+#### 1. Configure npm Package Access
+
+On npmjs.com, configure the package to allow GitHub Actions:
+
+1. Go to package settings: `https://www.npmjs.com/package/@scope/package-name/access`
+2. Under "Trusted Publisher", add the GitHub repository: `owner/repo`
+
+#### 2. Configure GitHub Actions Workflow
+
+The release workflow must include:
+
+```yaml
+permissions:
+  id-token: write
+```
