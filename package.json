@@ -1,0 +1,47 @@
+{
+  "name": "@sw3txn/npm-oidc-release-demo",
+  "version": "0.0.0-development",
+  "description": "Demo of automated npm releases with OIDC and semantic-release",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:ci": "jest --coverage --ci",
+    "lint": "eslint .",
+    "prepare": "husky"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sw3txn/npm-oidc-release-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sw3txn/npm-oidc-release-demo/issues"
+  },
+  "author": "sw3txn",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.0.10",
+    "@typescript-eslint/eslint-plugin": "^8.53.1",
+    "@typescript-eslint/parser": "^8.53.1",
+    "eslint": "^9.39.2",
+    "husky": "^9.1.7",
+    "jest": "^30.2.0",
+    "semantic-release": "^25.0.2",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
+  }
+}

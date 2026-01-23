@@ -1,0 +1,13 @@
+node_modules/
+dist/
+*.tsbuildinfo
+
+coverage/
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
+
+.husky/_
