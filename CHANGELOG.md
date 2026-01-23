@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v1.1.1...v1.2.0) (2026-01-23)
+
+
+### Features
+
+* add subtract function ([ef3ade9](https://github.com/sw3txn/npm-oidc-release-demo/commit/ef3ade9d1fd66bf61a4fe7f5870a405daa7ee2c9))
+
 # [1.2.0-beta.1](https://github.com/sw3txn/npm-oidc-release-demo/compare/v1.1.1...v1.2.0-beta.1) (2026-01-23)
 
 
