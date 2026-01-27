@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v2.0.0...v2.1.0) (2026-01-27)
+
+
+### Features
+
+* **math:** add divide function ([#20](https://github.com/sw3txn/npm-oidc-release-demo/issues/20)) ([80d246e](https://github.com/sw3txn/npm-oidc-release-demo/commit/80d246e4f27d65491341ad4b2fff237b337c4670)), closes [#18](https://github.com/sw3txn/npm-oidc-release-demo/issues/18)
+
 # [2.0.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v1.3.2...v2.0.0) (2026-01-23)
 
 
