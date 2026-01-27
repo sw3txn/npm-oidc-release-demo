@@ -1,4 +1,4 @@
-import { sum, multiply, subtract, factorial } from './math';
+import { sum, multiply, subtract, divide, factorial } from './math';
 
 describe('sum', () => {
   it('should sum two positive numbers', () => {
@@ -27,6 +27,24 @@ describe('multiply', () => {
 describe('subtract', () => {
   it('should subtract numbers', () => {
     expect(subtract(5, 3)).toBe(2);
+  });
+});
+
+describe('divide', () => {
+  it('should divide positive numbers', () => {
+    expect(divide(10, 2)).toBe(5);
+  });
+
+  it('should handle negative numbers', () => {
+    expect(divide(-10, 2)).toBe(-5);
+  });
+
+  it('should handle decimals', () => {
+    expect(divide(5, 2)).toBe(2.5);
+  });
+
+  it('should throw error for division by zero', () => {
+    expect(() => divide(10, 0)).toThrow('Division by zero is not allowed');
   });
 });
 
