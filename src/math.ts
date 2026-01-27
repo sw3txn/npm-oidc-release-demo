@@ -29,6 +29,20 @@ export function subtract(a: number, b: number): number {
 }
 
 /**
+ * Divides the first number by the second.
+ * @param a - Dividend
+ * @param b - Divisor
+ * @returns The quotient of a divided by b
+ * @throws {Error} If b is zero
+ */
+export function divide(a: number, b: number): number {
+  if (b === 0) {
+    throw new Error('Division by zero is not allowed');
+  }
+  return a / b;
+}
+
+/**
  * Calculates the factorial of a number.
  * @param n - The number to calculate factorial for
  * @returns The factorial of n
