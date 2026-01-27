@@ -6,7 +6,10 @@ This repository uses [semantic-release](https://github.com/semantic-release/sema
 
 ## Conventional Commits
 
-All commit messages must follow the [Conventional Commits](https://www.conventionalcommits.org/) specification. This is enforced by commitlint via a git hook.
+All commit messages must follow the [Conventional Commits](https://www.conventionalcommits.org/) specification. This is enforced in two places:
+
+- **Locally**: commitlint via git hook (`.husky/commit-msg`) - can be bypassed with `--no-verify`
+- **On PRs**: GitHub Actions workflow ([`.github/workflows/commitlint.yml`](.github/workflows/commitlint.yml)) - validates all commits in a PR
 
 ### Commit Message Format
 
