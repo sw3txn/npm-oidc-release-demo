@@ -1,8 +1,6 @@
 # Release Process
 
-This repository uses [semantic-release](https://github.com/semantic-release/semantic-release) for automated releases. Releases are triggered automatically when commits are pushed to the `main` branch.
-
-> **Note**: Pre-releases via a `beta` branch are supported but **optional**.
+This repository uses [semantic-release](https://github.com/semantic-release/semantic-release) with a **two-step release process**. This ensures releases are reviewed before publication to npm.
 
 ## Conventional Commits
 
@@ -102,41 +100,65 @@ chore: update dependencies
 
 ## Release Workflow
 
-### Automatic Releases
+### Two-Step Release Process
 
-1. **Make changes** on a feature branch
-2. **Commit** using conventional commit messages
-3. **Create PR** and get it reviewed
-4. **Merge to `main`** → semantic-release automatically:
-   - Analyzes commits since last release
-   - Determines next version number
-   - Generates release notes
-   - Updates CHANGELOG.md
-   - Publishes to npm with provenance
-   - Creates GitHub release
-   - Creates git tag
-   - Commits CHANGELOG.md and package.json back to repo
+This repository uses a **two-step release process** to ensure releases are reviewed before publication:
 
-### Pre-releases (Beta) - Optional
+#### Step 1: Prepare Release (Automated)
 
-> **This is optional.** Pre-releases are only needed if you want to test changes with early adopters before publishing to the stable `latest` npm tag. Most projects can skip this and only use the `main` branch.
+When you merge a PR to `main`:
 
-If you want to publish pre-releases, you can use the `beta` branch:
+1. If tests pass, the **Prepare Release** workflow runs automatically
+2. It analyzes commits using semantic-release to determine the next version
+3. If a release is needed, it:
+   - Creates a `release/vX.Y.Z` branch
+   - Updates `CHANGELOG.md`, `package.json`, and `package-lock.json`
+   - Commits the changes with message: `chore(release): X.Y.Z`
+   - Creates a PR from `release/vX.Y.Z` to `main`
+
+#### Step 2: Publish Release (On PR Merge)
+
+When you **review and merge the release PR**:
+
+1. The **Publish Release** workflow runs automatically
+2. If it detects the `chore(release):` PR title and branch `release/v` then continues
+3. Publishes the package to npm with OIDC authentication and provenance
+4. Creates a GitHub release with auto-generated release notes
+5. Creates a git tag (e.g., `v1.2.3`)
+
+### Developer Workflow
 
 ```bash
-git checkout -b feature/experimental
-# Make changes with conventional commits
-git push origin feature/experimental
+# 1. Create feature branch
+git checkout -b feature/my-feature
 
-# Create PR to beta branch
-# After merge, semantic-release publishes as:
-# 1.0.0-beta.1, 1.0.0-beta.2, etc.
+# 2. Make changes with conventional commits
+git commit -m "feat: add new awesome feature"
+
+# 3. Push and create PR
+git push origin feature/my-feature
+
+# 4. Get PR approved and merge to main
+# → Prepare Release workflow runs automatically
+# → Creates release PR
+
+# 5. Review the release PR
+# - Check version number is correct
+# - Review CHANGELOG.md entries
+# - Verify package.json version
+
+# 6. Merge the release PR
+# → Publish Release workflow runs automatically
+# → Package published to npm
+# → GitHub release created
 ```
 
-Beta releases are published to npm with the `beta` dist-tag:
-```bash
-npm install @sw3txn/npm-oidc-release-demo@beta
-```
+### Important Notes
+
+- **No direct commits to main**: GitHub Actions do not commit directly to main.
+- **Review before publish**: Every release must be reviewed via the release PR before publication.
+- **Source branch validation**: Publish workflow only runs for PRs merged from `release/v*` branches and PR title starting with `chore(release)`. Direct commits to main will not trigger releases.
+
 
 ## What Gets Published
 
@@ -179,9 +201,11 @@ On npmjs.com, configure the package to allow GitHub Actions:
 
 #### 2. Configure GitHub Actions Workflow
 
-The release workflow must include:
+The **Release** workflow (`.github/workflows/release.yml`) includes:
 
 ```yaml
 permissions:
-  id-token: write
+  id-token: write  # Required for OIDC authentication with npm
 ```
+
+The **Prepare Release** workflow does NOT need `id-token: write` since it only creates a PR and doesn't publish to npm.

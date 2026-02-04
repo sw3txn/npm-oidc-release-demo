@@ -1,14 +1,10 @@
 name: Release
 
 on:
-  workflow_run:
-    workflows: [Test]
-    types: [completed]
+  pull_request:
+    types: [closed]
     branches:
       - main
-  push:
-    branches:
-      - beta
 
 permissions:
   contents: write
@@ -20,7 +16,10 @@ jobs:
   release:
     runs-on: ubuntu-latest
     environment: release
-    if: ${{ github.event_name == 'push' || github.event.workflow_run.conclusion == 'success' }}
+    if: |
+      github.event.pull_request.merged == true &&
+      startsWith(github.event.pull_request.head.ref, 'release/v') &&
+      startsWith(github.event.pull_request.title, 'chore(release):')
 
     steps:
       - name: Checkout code
@@ -45,4 +44,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
-        run: npx semantic-release
+        run: npx semantic-release --extends ./.releaserc/publish.json
