@@ -29,7 +29,6 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
@@ -42,12 +41,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Run semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release --extends ./.releaserc/prepare.json
-
-      - name: Create release PR
-        uses: ./.github/actions/create-release-pr
+      - name: Prepare Release
+        uses: ./.github/actions/prepare-release
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          commit-sha: ${{ github.sha }}
