@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v2.1.0...v2.2.0) (2026-02-04)
+
+
+### Features
+
+* test release workflow ([0488c70](https://github.com/sw3txn/npm-oidc-release-demo/commit/0488c704aab7762a03310976ae416f73e21a709c))
+
 # [2.1.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v2.0.0...v2.1.0) (2026-01-27)
 
 
