@@ -7,7 +7,7 @@ This repository demonstrates a complete setup for secure, automated npm publishi
 ## What This Demo Shows
 
 ### Automated Release Pipeline
-- **Zero-touch releases** - Merge to `main` automatically publishes to npm
+- **Two-step release process** - Prepare release PR, review, then publish
 - **Semantic versioning** - Commit messages determine version bumps
 - **Generated changelogs** - Release notes created automatically
 - **Git tags and GitHub releases** - Created for every version
@@ -25,11 +25,15 @@ This repository demonstrates a complete setup for secure, automated npm publishi
 
 1. **Commit with conventional format**: `feat: add new feature`
 2. **Merge PR to `main` branch**
-3. **[Release workflow](.github/workflows/release.yml) runs automatically**:
-   - Runs tests on all Node LTS versions
+3. **[Prepare Release workflow](.github/workflows/prepare-release.yml) runs automatically**:
+   - Runs after tests pass
    - semantic-release analyzes commits
    - Determines version bump (major/minor/patch)
-   - Updates CHANGELOG.md and package.json
+   - Updates CHANGELOG.md, package.json, and package-lock.json
+   - Creates a release PR (e.g., `release/v1.2.3`)
+4. **Review and merge the release PR**
+5. **[Release workflow](.github/workflows/release.yml) runs automatically**:
+   - Detects the release commit
    - Publishes to npm with OIDC + provenance
    - Creates GitHub release and git tag
 
@@ -37,10 +41,12 @@ See [RELEASE.md](RELEASE.md) for detailed release workflow and commit message gu
 
 ## Key Configuration Files
 
-- **[.releaserc.json](.releaserc.json)** - semantic-release configuration ([Semantic Release Docs](https://semantic-release.gitbook.io/semantic-release/usage/configuration))
+- **[.releaserc/prepare.json](.releaserc/prepare.json)** - semantic-release config for preparing releases (no npm publish)
+- **[.releaserc/publish.json](.releaserc/publish.json)** - semantic-release config for publishing to npm
 - **[.commitlintrc.json](.commitlintrc.json)** - Conventional commit validation rules ([Commitlint Docs](https://commitlint.js.org/reference/configuration.html))
 - **[.husky/commit-msg](.husky/commit-msg)** - Git hook that enforces commit message format ([Husky Docs](https://typicode.github.io/husky/get-started.html))
-- **[.github/workflows/release.yml](.github/workflows/release.yml)** - Automated release workflow with OIDC publishing ([npm provenance](https://docs.npmjs.com/generating-provenance-statements))
+- **[.github/workflows/prepare-release.yml](.github/workflows/prepare-release.yml)** - Creates release PR after tests pass
+- **[.github/workflows/release.yml](.github/workflows/release.yml)** - Publishes to npm with OIDC ([npm provenance](https://docs.npmjs.com/generating-provenance-statements))
 - **[.github/workflows/test.yml](.github/workflows/test.yml)** - Multi-Node test matrix ([GitHub Actions Docs](https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs))
 
 
