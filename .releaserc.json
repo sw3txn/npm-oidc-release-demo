@@ -3,7 +3,6 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@semantic-release/changelog",
     [
       "@semantic-release/npm",
       {
@@ -15,7 +14,7 @@
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "git diff --quiet || exit 1"
+        "prepareCmd": "git diff --exit-code"
       }
     ],
     "@semantic-release/github"

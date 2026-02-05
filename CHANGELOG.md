@@ -1,3 +1,14 @@
+## [2.1.1](https://github.com/sw3txn/npm-oidc-release-demo/compare/v2.1.0...v2.1.1) (2026-02-05)
+
+
+### Bug Fixes
+
+* ensure release has no uncommited changes ([ab36564](https://github.com/sw3txn/npm-oidc-release-demo/commit/ab365643e382477f3947a5641fceb87ae5b096cb))
+* update prepare release workflow ([a4ba4fd](https://github.com/sw3txn/npm-oidc-release-demo/commit/a4ba4fda005a626ef53293580a697747d6163953))
+* update release process ([763d77a](https://github.com/sw3txn/npm-oidc-release-demo/commit/763d77ab4c15fd7044d3ff8c32a5814ef7e77708))
+
+
+
 # [2.1.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v2.0.0...v2.1.0) (2026-01-27)
 
 
