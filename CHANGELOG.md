@@ -1,3 +1,12 @@
+# [2.3.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v2.2.0...v2.3.0) (2026-02-05)
+
+
+### Features
+
+* add power function for exponentiation ([#30](https://github.com/sw3txn/npm-oidc-release-demo/issues/30)) ([c2ffd17](https://github.com/sw3txn/npm-oidc-release-demo/commit/c2ffd17f5d600f739712667bee6e2797a65d1368))
+
+
+
 # [2.2.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v2.1.1...v2.2.0) (2026-02-05)
 
 
