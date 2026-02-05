@@ -12,6 +12,12 @@
         "tarballDir": "dist"
       }
     ],
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "git diff --quiet || exit 1"
+      }
+    ],
     "@semantic-release/github"
   ]
 }
