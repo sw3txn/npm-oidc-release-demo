@@ -1,4 +1,4 @@
-import { sum, multiply, subtract, divide, factorial, abs } from './math';
+import { sum, multiply, subtract, divide, factorial, abs, power } from './math';
 
 describe('sum', () => {
   it('should sum two positive numbers', () => {
@@ -78,5 +78,20 @@ describe('abs', () => {
 
   it('should return zero for zero', () => {
     expect(abs(0)).toBe(0);
+  });
+});
+
+describe('power', () => {
+  it('should calculate power of positive numbers', () => {
+    expect(power(2, 3)).toBe(8);
+    expect(power(5, 2)).toBe(25);
+  });
+
+  it('should handle exponent of zero', () => {
+    expect(power(5, 0)).toBe(1);
+  });
+
+  it('should handle negative exponents', () => {
+    expect(power(2, -2)).toBe(0.25);
   });
 });

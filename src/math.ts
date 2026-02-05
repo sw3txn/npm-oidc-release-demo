@@ -71,3 +71,13 @@ export function factorial(n: number): number {
 export function abs(n: number): number {
   return n < 0 ? -n : n;
 }
+
+/**
+ * Calculates the power of a number.
+ * @param base - The base number
+ * @param exponent - The exponent
+ * @returns The result of base raised to the power of exponent
+ */
+export function power(base: number, exponent: number): number {
+  return Math.pow(base, exponent);
+}
