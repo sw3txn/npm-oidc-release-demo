@@ -1,8 +1,7 @@
 name: Release
 
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches:
       - main
 
@@ -16,10 +15,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     environment: release
-    if: |
-      github.event.pull_request.merged == true &&
-      startsWith(github.event.pull_request.head.ref, 'release/v') &&
-      startsWith(github.event.pull_request.title, 'chore(release):')
+    if: startsWith(github.event.head_commit.message, 'chore(release):')
 
     steps:
       - name: Checkout code
