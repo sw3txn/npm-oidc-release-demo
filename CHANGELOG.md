@@ -1,3 +1,12 @@
+# [2.2.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v2.1.1...v2.2.0) (2026-02-05)
+
+
+### Features
+
+* add abs function for calculating absolute values ([#28](https://github.com/sw3txn/npm-oidc-release-demo/issues/28)) ([6dc88e4](https://github.com/sw3txn/npm-oidc-release-demo/commit/6dc88e453db0aee7f83f7c6e206149b6b76c6a5d))
+
+
+
 ## [2.1.1](https://github.com/sw3txn/npm-oidc-release-demo/compare/v2.1.0...v2.1.1) (2026-02-05)
 
 
