@@ -1,4 +1,4 @@
-import { sum, multiply, subtract, divide, factorial } from './math';
+import { sum, multiply, subtract, divide, factorial, abs } from './math';
 
 describe('sum', () => {
   it('should sum two positive numbers', () => {
@@ -64,5 +64,19 @@ describe('factorial', () => {
 
   it('should throw error for negative numbers', () => {
     expect(() => factorial(-1)).toThrow('Factorial is not defined for negative numbers');
+  });
+});
+
+describe('abs', () => {
+  it('should return absolute value of positive number', () => {
+    expect(abs(5)).toBe(5);
+  });
+
+  it('should return absolute value of negative number', () => {
+    expect(abs(-5)).toBe(5);
+  });
+
+  it('should return zero for zero', () => {
+    expect(abs(0)).toBe(0);
   });
 });
