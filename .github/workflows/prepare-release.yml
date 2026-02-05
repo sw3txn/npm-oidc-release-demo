@@ -55,10 +55,10 @@ jobs:
         uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8.1.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(release): ${{ steps.version.outputs.next }} [skip ci]"
+          commit-message: "chore(release): ${{ steps.version.outputs.next }}"
           branch: "release/v${{ steps.version.outputs.next }}"
           delete-branch: true
-          title: "chore(release): ${{ steps.version.outputs.next }} [skip ci]"
+          title: "chore(release): ${{ steps.version.outputs.next }}"
           body: |
             This PR prepares the release of version ${{ steps.version.outputs.next }}.
 
