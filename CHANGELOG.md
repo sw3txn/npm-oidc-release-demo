@@ -1,3 +1,12 @@
+## [2.3.1](https://github.com/sw3txn/npm-oidc-release-demo/compare/v2.3.0...v2.3.1) (2026-02-10)
+
+
+### Bug Fixes
+
+* demo math.ts ([#32](https://github.com/sw3txn/npm-oidc-release-demo/issues/32)) ([fa7c5d9](https://github.com/sw3txn/npm-oidc-release-demo/commit/fa7c5d9b5e84f8a9db05d3ed18a3a64636ddeca2))
+
+
+
 # [2.3.0](https://github.com/sw3txn/npm-oidc-release-demo/compare/v2.2.0...v2.3.0) (2026-02-05)
 
 
